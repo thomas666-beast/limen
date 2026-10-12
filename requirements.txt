@@ -1,0 +1,2 @@
+# Runtime
+pyyaml>=6.0
