@@ -25,6 +25,11 @@ dev = [
 ui = [
     "streamlit>=1.36",
 ]
+analysis = [
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+    "jupyterlab>=4.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -32,7 +37,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra -q"
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 
 [tool.ruff]
 line-length = 100
@@ -44,4 +49,3 @@ target-version = ["py311"]
 
 [project.scripts]
 limen = "limen.cli:main"
-
